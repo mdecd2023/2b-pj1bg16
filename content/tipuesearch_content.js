@@ -1,1 +1,1 @@
-var tipuesearch = {"pages": [{'title': 'About', 'text': '\n 倉儲連結: https://github.com/mdecd2023/2b-pj1bg16 \n 網頁連結: https://mdecd2023.github.io/2b-pj1bg16/content/index.html \n 雪山胖子 \n 40923219 陳柏成 40923225黃亦銘 40923246 蕭仲佑', 'tags': '', 'url': 'About.html'}]};
+var tipuesearch = {"pages": [{'title': 'About', 'text': '\n 倉儲連結: https://github.com/mdecd2023/2b-pj1bg16 \n 網頁連結: https://mdecd2023.github.io/2b-pj1bg16/content/index.html \n \n 40923219 陳柏成 40923225黃亦銘 40923246 蕭仲佑', 'tags': '', 'url': 'About.html'}]};
