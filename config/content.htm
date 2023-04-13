@@ -128,12 +128,38 @@
 <p><img alt="" height="491" src="/images/215.png" width="831"/></p>
 <h2>W8</h2>
 <p>練習使用鍵盤來操控車子</p>
-<p><img alt="" height="1021" src="/images/5.png" width="1898"/></p>
+<p><img alt="" height="356" src="/images/5.png" width="662"/></p>
+<pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">function sysCall_actuation()
+    local message, auxiliaryData = sim.getSimulatorMessage()
+    if (message == sim.message_keypress) then 
+        if auxiliaryData[1] == string.byte("s") then
+            --print("s")
+            sim.setJointTargetVelocity(leftMotor,-speed)
+            sim.setJointTargetVelocity(rightMotor,-speed)
+        elseif auxiliaryData[1] == string.byte("a") then
+            --print("a")
+            sim.setJointTargetVelocity(leftMotor,speed/4)
+            sim.setJointTargetVelocity(rightMotor,speed)
+        elseif auxiliaryData[1] == string.byte("d") then
+            --print("d")
+            sim.setJointTargetVelocity(leftMotor,speed)
+            sim.setJointTargetVelocity(rightMotor,speed/4)
+        elseif auxiliaryData[1] == string.byte("w") then
+            --print("w")
+            sim.setJointTargetVelocity(leftMotor,speed)
+            sim.setJointTargetVelocity(rightMotor,speed)
+        elseif auxiliaryData[1] == string.byte("p") then
+            --print("p")
+            sim.pauseSimulation()
+        else
+            sim.setJointTargetVelocity(leftMotor,0)
+            sim.setJointTargetVelocity(rightMotor,0)
+        end
+    end</pre>
 <p>=======</p>
-<p><a href="https://mde.tw/cd2023/downloads/newbing_bubbleRob_football.7z">與開發 football 遊戲有關的 legacy remote api python 參考程式.7z</a></p>
-<h1>測試</h1>
+<p><a href="https://mde.tw/cd2023/downloads/newbing_bubbleRob_football.7z">與開發 football 遊戲有關的 legacy remote api python 參考程式.7z</a></p><h1>測試1</h1>
 <p>?</p>
-<h2>測試</h2>
+<h2>測試2</h2>
 <p><span style="color: #ffffff;"><span style="background-color: #000000;">黑底白字</span></span></p>
 <p><span style="color: #ffffff;"><span style="background-color: #000000;"></span></span></p>
 <p><span style="color: #ffffff;"><span style="background-color: #000000;"><img alt="" height="187" src="/images/upper cat.gif" width="280"/></span></span></p>
